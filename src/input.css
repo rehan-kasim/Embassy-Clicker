@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+body {
+    background-color: #18191c;
+    background-image: 
+    linear-gradient(to right, #232529 1px, transparent 1px),
+    linear-gradient(to bottom, #232529 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+.font-silkscreen{
+      font-family: 'Silkscreen', monospace;
+}
+
+.font-spacemono{
+    font-family: 'Space Mono', monospace;
+}
+
+@keyframes wiggle {
+    0%, 100% {transform: rotate(-3deg);}
+    50% {transform: rotate(6deg);}
+}
+
+@theme {
+    --animate-wiggle: wiggle 2s ease-in-out infinite;
+}

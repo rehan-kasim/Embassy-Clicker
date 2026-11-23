@@ -9,32 +9,70 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="src/output.css">
 </head>
-<body>
-    <aside>
-        <p>Stamp Counter</p>
-        <p id="totalStamps">123456</p>
-        <div>
-            <div>
-                <p>Stat</p>
-                <p>Amount</p>
+<body class="font-spacemono">
+    <div class="m-7 flex flex-row">
+        <aside>
+            <p class="font-silkcreen text-2xl text-[#8fb8e8] mb-1">Stamp Counter</p>
+            <p id="totalStampsText" class="text-7xl text-[#eee4cf] font-silkscreen mb-6">000</p>
+            <div class="bg-[#efe1c3] rounded-md text-[#222222] w-70 flex flex-col gap-2 font-spacemono">
+                <div class="ml-3 mr-3 mt-2 flex flex-row justify-between font-bold">
+                    <p>Stat</p>
+                    <p>Amount</p>
+                </div>
+                <div class="ml-3 pb-3 mr-3 mt-2 border-b-2 border-dashed border-[#907843]/70 flex flex-row justify-between">
+                    <p>Per Click</p>
+                    <p id="perClickTextStat" class="font-bold font-spacemono text-2xl">1</p>
+                </div>
+                <div class="ml-3 pb-3 mr-3 mt-2 border-[#907843]/70 border-b-2 border-dashed flex flex-row justify-between py-1">
+                    <p>Per Second</p>
+                    <p id="perSecondText" class="font-bold font-spacemono text-2xl">0</p>
+                </div>
+                <div class="ml-3 pb-3 mr-3 mt-2 border-[#907843]/70 border-b-2 border-dashed flex flex-row justify-between py-1">
+                    <p>Total Clicks</p>
+                    <p id="totalClicksText" class="font-bold font-spacemono text-2xl">0</p>
+                </div>
+                <div class="ml-3 pb-3 mr-3 mt-2 border-[#907843]/70 border-b-2 border-dashed flex flex-row justify-between py-1">
+                    <p>Total Stamps</p>
+                    <p id="perSecondText" class="font-bold font-spacemono text-2xl">0</p>
+                </div>
+                <div class="ml-3 pb-3 mb-6 mr-3 mt-2 border-[#907843]/70 border-b-2 border-dashed flex flex-row justify-between py-1">
+                    <p>Easter Eggs Found</p>
+                    <p id="perSecondText" class="font-bold font-spacemono text-2xl">0/10</p>
+                </div>
             </div>
-            <div>
-                <p>Per Click</p>
-                <p id="perClickText">1</p>
+        </aside>
+        <main class="flex items-center flex-1 mt-50 flex-col">
+            <div class="">
+                <img src="assests/logo.png" class="h-50 animate-wiggle">
+                <p id="perClickTextCenter" class="text-neutral-500">Click The Embassy : +1</p>
             </div>
+        </main>
+        <aside class="w-80">
+            <p class="font-silkcreen text-2xl text-[#8fb8e8] mb-5">UPGRADES</p>
             <div>
-                <p>Per Second</p>
-                <p id="perSecondText">0</p>
+                <div class="bg-[#efe1c3] flex flex-row rounded-md pl-2 text-[#222222]">
+                    <div class="flex flex-1 flex-col justify-between py-2">
+                        <p class="font-bold">Cloud's Mouse</p>
+                        <p>You Get Cloud's Mouse To Click</p>
+                        <p>+1 Stamps Per Click</p>
+                    </div>
+                        <button onclick="buyUpgrade(1, 0, 10)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                            <span class="[writing-mode:vertical-rl]">Buy 10</span>
+                        </button>
+                    </div>
+                    <div class="bg-[#efe1c3] mt-5 flex flex-row rounded-md pl-2 text-[#222222]">
+                    <div class="flex flex-1 flex-col justify-between py-2">
+                        <p class="font-bold">Riitam's Help</p>
+                        <p>Riitam Comes To help You.</p>
+                        <p>+5 Stamps Per Sec</p>
+                    </div>
+                        <button onclick="buyUpgrade(0, 1, 50)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                            <span class="[writing-mode:vertical-rl]">Buy 50</span>
+                        </button>
+                    </div>
             </div>
-
-        </div>
-    </aside>
-    <main>
-
-    </main>
-    <aside>
-        
-    </aside>
-    <script src="src/index.js"></script>
+        </aside>
+    </div>
+<script src="src/index.js"></script>
 </body>
 </html>
