@@ -33,13 +33,13 @@
                 </div>
                 <div class="ml-3 pb-3 mr-3 mb-5 mt-2 border-[#907843]/70 border-b-2 border-dashed flex flex-row justify-between py-1">
                     <p>Total Stamps</p>
-                    <p id="perSecondText" class="font-bold font-spacemono text-2xl">0</p>
+                    <p id="totalStampStatText" class="font-bold font-spacemono text-2xl">0</p>
                 </div>
             </div>
         </aside>
         <main class="flex items-center flex-1 mt-50 flex-col">
             <div class="">
-                <img src="assests/logo.png" class="h-50 animate-wiggle hover:scale-102 active:scale-97 cursor-pointer transition-transform">
+                <img src="assests/logo.png" id="embassy" class="h-50 animate-wiggle hover:scale-102 active:scale-97 cursor-pointer transition-transform">
                 <p id="perClickTextCenter" class="text-neutral-500">Click The Embassy : +1</p>
             </div>
         </main>
@@ -52,7 +52,7 @@
                         <p>You Get Cloud's Mouse To Click</p>
                         <p>+1 Stamps Per Click</p>
                     </div>
-                        <button onclick="buyUpgrade(1, 0, 10)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy10" onclick="buyUpgrade(1, 0, 10)" class="cursor-pointer flex items-center justify-center rounded-r-md px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 10</span>
                         </button>
                     </div>
@@ -62,7 +62,7 @@
                         <p>Riitam Comes To help You.</p>
                         <p>+5 Stamps Per Sec</p>
                     </div>
-                        <button onclick="buyUpgrade(0, 5, 50)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy50" onclick="buyUpgrade(0, 5, 50)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 50</span>
                         </button>
                     </div>
@@ -72,7 +72,7 @@
                         <p>You Get American Visa And Became Great Again.</p>
                         <p>+100 Stamps Per Click</p>
                     </div>
-                        <button onclick="buyUpgrade(100, 0, 1500)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy1500" onclick="buyUpgrade(100, 0, 1500)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 1500</span>
                         </button>
                     </div>
@@ -82,7 +82,7 @@
                         <p>Cloud Add more Grants in Shop.</p>
                         <p>+100 Stamps Per Sec</p>
                     </div>
-                        <button onclick="buyUpgrade(0, 100, 1000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy1000" onclick="buyUpgrade(0, 100, 1000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 1000</span>
                         </button>
                     </div>
@@ -92,7 +92,7 @@
                         <p>Blob Gives You His Art To Click.</p>
                         <p>+10k Stamps Per Click</p>
                     </div>
-                        <button onclick="buyUpgrade(10000, 0, 200000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy200k" onclick="buyUpgrade(10000, 0, 200000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 200k</span>
                         </button>
                     </div>
@@ -102,7 +102,7 @@
                         <p>Orepheus Write You his Haiku.</p>
                         <p>+10k Stamps Per Sec</p>
                     </div>
-                        <button onclick="buyUpgrade(0, 10000, 100000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy100k" onclick="buyUpgrade(0, 10000, 100000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 100k</span>
                         </button>
                     </div>
@@ -112,7 +112,7 @@
                         <p>Whole Embassy Comes to Help You</p>
                         <p>+100k Stamps Per Click</p>
                     </div>
-                        <button onclick="buyUpgrade(100000, 0, 2000000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
+                        <button id="buy2M" onclick="buyUpgrade(100000, 0, 2000000)" class="cursor-pointer flex items-center justify-center rounded-r-md bg-green-400 px-5 py-3 h-30 border-l-2 border-dashed border-l-green-950">
                             <span class="[writing-mode:vertical-rl]">Buy 2M</span>
                         </button>
                     </div>

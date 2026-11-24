@@ -24,3 +24,18 @@ body {
 @theme {
     --animate-wiggle: wiggle 2s ease-in-out infinite;
 }
+
+.float-text {
+    font-size: 30px;
+    position: fixed;
+    pointer-events: none;
+    font-weight: bold;
+    color: #9896b2;
+    animation: floatUp 1s ease-out forwards;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes floatUp {
+    from { opacity: 1; transform: translate(-50%, -50%); }
+    to   { opacity: 0; transform: translate(-50%, -150px); }
+}
