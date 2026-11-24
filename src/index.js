@@ -180,5 +180,8 @@ function loadGame() {
     }
 }
 
-setInterval(persecondupdate,1000);
+loadGame();
+setInterval(persecondupdate, 1000);
+setInterval(saveGame, 5000);
+window.addEventListener("beforeunload", saveGame);
 updateDisplay();
