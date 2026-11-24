@@ -21,6 +21,21 @@ function clickEmbassy(e) {
     updateDisplay();
     showFloat(e);
 }
+function persecondupdate() {
+    stamps += perSecond;
+    totalStamps += perSecond;
+    updateDisplay();
+}
+
+function admin() {
+    var adminperclick = parseFloat(window.prompt("Enter the amount of PerClick you want"));
+    var adminpersec = parseFloat(window.prompt("Enter the amount of PerSec you want"));
+
+    if (!isNaN(adminperclick)) perClick = adminperclick;
+    if (!isNaN(adminpersec)) perSecond = adminpersec;
+
+    updateDisplay();
+}
 
 document.addEventListener('visibilitychange', function(){
     if (document.hidden){
@@ -29,13 +44,6 @@ document.addEventListener('visibilitychange', function(){
     }
     document.title = "Embassy Clicker"
 })
-
-function admin(){
-    var adminperclick = window.prompt("Enter the Amount of PerCLick u want")
-    perClick = adminperclick
-    var adminpersec = window.prompt("Enter the Amount Of Per Sec U Want");
-    perSecond = adminpersec;
-}
 
 function buyUpgrade(clickBonus, secondBonus, price) {
     if (stamps >= price) {
@@ -140,4 +148,5 @@ function showFloat(e) {
     span.addEventListener("animationend", () => span.remove());
 }
 
+setInterval(persecondupdate,1000);
 updateDisplay();

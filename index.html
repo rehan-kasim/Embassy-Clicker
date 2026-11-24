@@ -11,7 +11,7 @@
 </head>
 <body class="font-spacemono">
     <div class="m-7 flex flex-row">
-        <aside>
+        <aside class="w-80">
             <p class="font-silkcreen text-2xl text-[#8fb8e8] mb-1">Stamp Counter</p>
             <p id="totalStampsText" class="text-7xl text-[#eee4cf] font-silkscreen mb-6">000</p>
             <div class="bg-[#efe1c3] rounded-md text-[#222222] w-70 flex flex-col gap-2 font-spacemono">
@@ -44,9 +44,11 @@
             </div>
         </main>
         <aside class="w-80 h-[calc(100vh-3.5rem)] overflow-y-auto">
-            <p class="font-silkcreen text-2xl text-[#8fb8e8] mb-5">UPGRADES</p>
+            <button onclick="admin()">
+                <span class="font-silkcreen text-2xl text-[#8fb8e8] mb-5">UPGRADES</span>
+            </button>
             <div>
-                <div class="bg-[#efe1c3] flex flex-row rounded-md pl-2 text-[#222222]">
+                <div class="bg-[#efe1c3] flex flex-row rounded-md mt-5 pl-2 text-[#222222]">
                     <div class="flex flex-1 flex-col justify-between py-2">
                         <p class="font-bold">Cloud's Mouse</p>
                         <p>You Get Cloud's Mouse To Click</p>
