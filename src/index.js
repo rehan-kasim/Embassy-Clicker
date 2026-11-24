@@ -148,5 +148,37 @@ function showFloat(e) {
     span.addEventListener("animationend", () => span.remove());
 }
 
+var SAVE_KEY = "EmbassyData";
+
+function saveGame() {
+    try {
+        var data = {
+            stamps: stamps,
+            perClick: perClick,
+            perSecond: perSecond,
+            totalClicks: totalClicks,
+            totalStamps: totalStamps
+        };
+        localStorage.setItem(SAVE_KEY, JSON.stringify(data));
+    } catch (err) {
+        console.log("Could not save", err);
+    }
+}
+
+function loadGame() {
+    try {
+        var saved = localStorage.getItem(SAVE_KEY);
+        if (!saved) return;
+        var data = JSON.parse(saved);
+        stamps = Number(data.stamps) || 0;
+        perClick = Number(data.perClick) || 1;
+        perSecond = Number(data.perSecond) || 0;
+        totalClicks = Number(data.totalClicks) || 0;
+        totalStamps = Number(data.totalStamps) || 0;
+    } catch (err) {
+        console.log("Could not load save", err);
+    }
+}
+
 setInterval(persecondupdate,1000);
 updateDisplay();
