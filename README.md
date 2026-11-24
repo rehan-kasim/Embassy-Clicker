@@ -56,7 +56,8 @@ npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
 
 ## Help
 
-Progress is not saved yet, so if you refresh the page you start from zero again.
+Progress is not saved yet, so if you refresh the page you start from zero again.(done)
+Ask CHatgpt or open a issue 
 
 ## License
 
